@@ -10,6 +10,7 @@ ACTUAL_OUTPUT= [data_file(:, 1)];
 
 THETA = ones(1,columns(X));
 alpha = 0.00001;
+steps = 300
 printf("Initial THETA is :"), disp(THETA);
 printf("alpha is :%f \n", alpha);
 #cost_function(X, ACTUAL_OUTPUT, THETA, alpha);
@@ -18,7 +19,7 @@ printf("alpha is :%f \n", alpha);
 #cost_function(X, ACTUAL_OUTPUT, THETA, alpha);
 costs = [];
 
-for i = 1:300
+for i = 1:steps
 	fprintf("Iteration ---------------%d\n",i);
   	THETA = linear_regression(X, ACTUAL_OUTPUT, THETA, alpha);
 	printf("THETA is :"), disp(THETA);
