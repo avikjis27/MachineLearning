@@ -16,8 +16,8 @@ NEGETIVE_DATA = data_file(NEGETIVE_DATA_INDX,:);
 
 POSITIVE_DATA = POSITIVE_DATA(:,1:end-1)
 NEGETIVE_DATA = NEGETIVE_DATA(:,1:end-1)
-plot(POSITIVE_DATA);
-plot(NEGETIVE_DATA);
+plot(POSITIVE_DATA,"+");
+plot(NEGETIVE_DATA,"*");
 
 
 THETA = zeros(1,columns(X));
@@ -35,4 +35,4 @@ for i = 1:steps
 
 endfor
 
-plot(costs);
+##plot(costs);
